@@ -6,10 +6,12 @@ def main():
     open_file()
     read_file()
 
+#file name is an argument, you must be in the bookbot directory
 file_name = sys.argv[1]
 file_path = f"books/{file_name}"
 print(f"----BEGIN BOOK REPORT OF {file_path}-----")
 
+#open file
 def open_file():
     if len(sys.argv) < 2:
         print("Expected usage: python main.py <filename>")
@@ -28,6 +30,7 @@ def open_file():
 def sort_on(dict):
     return dict[1]
 
+#all the analysis goes in this function
 def read_file():
     file_contents = open_file()
     contents = file_contents.split()
